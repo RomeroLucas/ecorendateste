@@ -24,8 +24,13 @@ app.use(materiais)
 const feedback = require('./routes/feedback')
 app.use(feedback)
 
-const port = Process.ev.PORT || 4000
+//VIEW PARA TESTES
+app.get('/', (req, res, next) => {
+    res.json({mensagem: "Olá mundo!"})
+})
 
-app.listen(port, () => {
+// const port = Process.env.PORT || 4000
+
+app.listen(4000, () => {
     console.log('Rodando em: http://localhost:4000/')
 })
