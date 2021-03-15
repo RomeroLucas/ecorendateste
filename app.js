@@ -29,7 +29,7 @@ app.get('/', (req, res, next) => {
     res.json({mensagem: "Olá mundo!"})
 })
 
-const port = Process.env.PORT || 4000
+const port = process.env.PORT || 4000
 
 app.listen(port, () => {
     console.log('Rodando em: http://localhost:4000/')
