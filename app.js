@@ -24,6 +24,8 @@ app.use(materiais)
 const feedback = require('./routes/feedback')
 app.use(feedback)
 
-app.listen(4000, () => {
+const port = Process.ev.PORT || 4000
+
+app.listen(port, () => {
     console.log('Rodando em: http://localhost:4000/')
 })
